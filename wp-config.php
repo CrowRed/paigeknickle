@@ -13,15 +13,19 @@
  *
  * @package WordPress
  */
-include 'wp-config-secure.php';
 
-define(‘FORCE_SSL_LOGIN’, true);
-define(‘FORCE_SSL_ADMIN’, true);
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define('DB_NAME', 'wordpress');
 
-define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/wordpress');
-define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME']);
-define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
-define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/wp-content');
+/** MySQL database username */
+define('DB_USER', 'root');
+
+/** MySQL database password */
+define('DB_PASSWORD', 'root');
+
+/** MySQL hostname */
+define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -29,19 +33,33 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
-// Limit the number of saved revisions
-define('WP_POST_REVISIONS', 5);
+/**#@+
+ * Authentication Unique Keys and Salts.
+ *
+ * Change these to different unique phrases!
+ * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define('AUTH_KEY',         'a0|i#iY03wq$R`LY%I|a9Xz2+Y)g4DT*0MA59t-JSCIG~5E/PIN5b&gp7!o-I3ip');
+define('SECURE_AUTH_KEY',  'JYlKV~d_!D)g9oNxrb!p7M6~cbkv>/YTvZo?;V%]+b:@m:om9XpV0b:|&,rXQ2y.');
+define('LOGGED_IN_KEY',    ':8Jto~TvtzG]0.OXfWA{r}Azc3@yf79H[u1211kQntCa6kdu@qhwLqL,n9u?V/wo');
+define('NONCE_KEY',        ':6jXMA+juQ7t*-+1]?k|ukYXJCm9aWd;_^GyGPN4M9< N)tL+o[T ^sST|lMt42u');
+define('AUTH_SALT',        'V.L2<ha.phza.O!uHy|EK:)}|ILl)!y=rCY/j0xEChFjq!733g#g=ex4.]0XN,yh');
+define('SECURE_AUTH_SALT', 'g|mdL[U.z]}-5=$r}K/s3*CC)E&GzCmVd2RFaA<@Ed#1#QoPyw&@(a5.,?D0:n9-');
+define('LOGGED_IN_SALT',   '<`B1J4Ak~o#{.eG4-ls#X^e0,Rb55!S-`!|Z3;[;JrSz~zRig?3Fgq&.tHifg$>l');
+define('NONCE_SALT',       'B .2q{`&L?P#.0 iqYWzeS00|kr&k~;[(h|T4GNl5g2lQk+6rX4!GH]Yb(<v{<l!');
 
-// Automatically save drafts every 3 minutes.
-define('AUTOSAVE_INTERVAL', 180);
+/**#@-*/
 
-// Database maintenance via the admin interface.  Only uncomment when doing a repair.
-// Go here to repair and optimize: https://mydomain.ca/wp-admin/maint/repair.php
-//define('WP_ALLOW_REPAIR', true);
-
-// Logging
-@ini_set('log_errors','On');
-@ini_set('display_errors','Off');
+/**
+ * WordPress Database Table prefix.
+ *
+ * You can have multiple installations in one database if you give each a unique
+ * prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix  = 'wp_';
 
 /**
  * WordPress Localized Language, defaults to English.
@@ -61,11 +79,6 @@ define('WPLANG', '');
  * in their development environments.
  */
 define('WP_DEBUG', false);
-
-// Enable the WordPress Object Cache:
-define(ENABLE_CACHE, true);
-
-define('WP_CACHE', true);
 
 /* That's all, stop editing! Happy blogging. */
 
