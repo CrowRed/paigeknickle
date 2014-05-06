@@ -3,12 +3,19 @@
     <head>
         <title>Paige Knickle</title>
         <style type="text/css">
+            @font-face {
+                font-family: "Megrim";
+                font-style: normal;
+                font-weight: 400;
+                src: local("Megrim"), url("http://themes.googleusercontent.com/static/fonts/megrim/v5/DO-J3fN7tP-bKfriFzSkEOvvDin1pK8aKteLpeZ5c0A.woff") format("woff");
+            }
             html {
                 height: 100%;
             }
             body {
                 margin-top: 0px;
                 height: 100%;
+                /* background-image: url('http://static.tumblr.com/iqhzefb/Vhgn566r2/c10a606d4e26f7c1a6c6db4fa32cf36a.jpg'); */
             }
             nav {
                 position: fixed;
@@ -17,25 +24,55 @@
                 margin-left: -8px;
                 padding-left: 2.5%;
                 padding-right: 2.5%;
-                background-color: #e8e9f7;
+                background-color: rgba(195, 75, 75, 0.8);
+                /* background-color: #c34b4b; */
             }
-            nav h1, h3 {
-                font-family: helvetica;
+            nav h1 {
+                font-family: 'Megrim',cursive;
+	            font-weight: 400;
+	            font-size: 27px;
+            	color: rgb(255, 255, 255);
+	            text-transform: uppercase;
+            }
+            nav h3 {
+                font-family: 'Megrim',cursive;
+	            font-weight: 400;
+	            font-size: 20px;
+            	color: rgb(255, 255, 255);
+	            text-transform: uppercase;
+            }
+            a:hover {
+                cursor: crosshair;
             }
             main {
-                margin-left: 24%;
-                margin-right: -8px;
+                margin-top: 50px;
                 float: right;
-                height: 110%;
-                background-color: #ecf6f9;
+                width: 74%;
             }
             article {
-                margin-top: 50px;
+                float: left;
                 margin-right: 5%;
-                margin-left: 10%;
+                margin-left: 5%;
+                margin-bottom: 5%;
+                background-color: #abdbe3;
+                width: 130px;
+                height: 130px;
+                padding: 90px;
+	            border: 1px solid rgba(154, 138, 171, 0.4);
+	            background-color: rgba(15, 42, 96, 0.7);
             }
             article p {
-                font-family: helvetica;
+                font-family: 'Megrim',cursive;
+	            font-weight: 400;
+	            font-size: 20px;
+            	color: rgb(255, 255, 255);
+	            text-transform: uppercase;
+                text-align: center;
+            }
+            article p:hover {
+                cursor: crosshair;
+                color: #6a479b;
+                text-decoration: none;
             }
         </style>
     </head>
@@ -45,7 +82,25 @@
             <h3>I am a vocalist and web developer from Canada.</h3>
         </nav>
         <main>
-            <article><p>This will be a paragraph. Although I am not going to include the functionaity to make tumblr embed the posts here, this is where the posts will be!</p>
+            <!--BLOG-->
+            <a href="blog.paigeknickle.com"><article>
+                <p>Blog</p>
+            </article></a>
+            <!--ART-->
+            <a href ="/art/"><article>
+                <p>Art</p>
+            </article>
+            <!--BIO-->
+            <a href ="/bio/"><article>
+                <p>Bio</p>
+            </article>
+            <!--TUMBLR-->
+            <a href ="paige-on-stage.tumblr.com"><article>
+                <p>tumblr</p>
+            </article>
+            <!--MUSIC-->
+            <a href ="/music/"><article>
+                <p>Music</p>
             </article>
         </main>
     </body>
