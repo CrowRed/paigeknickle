@@ -42,7 +42,25 @@ document.getElementsByClassName("contentarticle").document.write("</div>");
             <!--BLOG-->
             <a href="http://blog.paigeknickle.com">
                 <table>
-                    <tr><td class="contentarticle"></td></tr>
+                    <tr><td class="contentarticle">
+                        <script>
+                            if (window.XMLHttpRequest)
+                              {// code for IE7+, Firefox, Chrome, Opera, Safari
+                              xmlhttp=new XMLHttpRequest();
+                              }
+                            else
+                              {// code for IE6, IE5
+                              xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                              }
+                            xmlhttp.open("GET","contentarticle.xml",false);
+                            xmlhttp.send();
+                            xmlDoc=xmlhttp.responseXML;
+                            
+                            var y=xmlDoc.getElementsByTagName("title");
+                            var element=document.getElementById("contentarticle");
+                            element.document.write(y);
+                        </script>
+                    </td></tr>
                     <tr><td class="label"><p>Blog</p></td></tr>
                 </table>
             </a>
