@@ -24,6 +24,10 @@ xmlDoc.getElementsByTagName("date")[0].childNodes[0].nodeValue;
 document.getElementById("body").innerHTML=
 xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;
 
+x=xmlDoc.getElementsByTagName("title")[0];
+y=x.childNodes[0];
+document.write(y.nodeValue);
+
 </script>
     </head>
     <body>
