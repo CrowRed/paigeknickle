@@ -16,21 +16,6 @@ else
 xmlhttp.open("GET","contentarticle.xml",false);
 xmlhttp.send();
 xmlDoc=xmlhttp.responseXML; 
-
-document.getElementById("title").document.write("<table border='1'>");
-var x=xmlDoc.getElementsByTagName("article");
-for (i=0;i<x.length;i++)
-  { 
-  document.write("<tr><td>");
-  document.write(x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
-  document.getElementById("title").document.write(x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
-  document.write("</td><td>");
-  document.write(x[i].getElementsByTagName("date")[0].childNodes[0].nodeValue);
-  document.getElementById("title").document.write(x[i].getElementsByTagName("date")[0].childNodes[0].nodeValue);
-  document.write("</td></tr>");
-  }
-document.write("</table>");
-
 </script>
     </head>
     <body>
@@ -46,6 +31,21 @@ document.write("</table>");
             <a href="http://blog.paigeknickle.com">
                 <table>
                     <tr><td class="contentarticle">
+<script>
+document.write("<table border='1'>");
+var x=xmlDoc.getElementsByTagName(“article”);
+for (i=0;i<x.length;i++)
+  { 
+  document.write("<tr><td>");
+  document.write(x[i].getElementsByTagName(“title”)[0].childNodes[0].nodeValue);
+  document.write("</td><td>");
+  document.write(x[i].getElementsByTagName(“day”)[0].childNodes[0].nodeValue);
+  document.write("</td></tr>");
+  }
+document.write("</table>");
+
+</script>
+
                         <h2 id="title"></h2>
                         <h4 id="date"></h4>
                         <p id="body"></p>
