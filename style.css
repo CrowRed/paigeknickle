@@ -44,27 +44,36 @@ main {
     float: right;
     width: 74%;
 }
-article {
+table {
     float: left;
     margin-right: 5%;
     margin-left: 5%;
     margin-bottom: 5%;
-    background-color: #abdbe3;
-    width: 130px;
-    height: 130px;
-    padding: 90px;
-	  border: 1px solid rgba(154, 138, 171, 0.4);
-	  background-color: rgba(15, 42, 96, 0.7);
+    /* background-color: #abdbe3; */
+    background-color: rgba(15, 42, 96, 0.7);
 }
-article p {
+td.content {
+    margin: 0px;
+    height: 300px;
+    width: 300px;
+}
+td.content p {
+    font-family: verdana;
+    color: white;
+    font-size: 15px;
+}
+td.label {
+    background-color: rgba(195, 75, 75, 0.5);
+}
+td.label p {
     font-family: 'Megrim',cursive;
-	  font-weight: 400;
-	  font-size: 20px;
+    font-weight: 400;
+    font-size: 20px;
     color: rgb(255, 255, 255);
-	  text-transform: uppercase;
+    text-transform: uppercase;
     text-align: center;
 }
-article p:hover {
+td.label p:hover {
     cursor: crosshair;
     color: #6a479b;
     text-decoration: none;
