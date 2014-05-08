@@ -17,17 +17,13 @@ xmlhttp.open("GET","contentarticle.xml",false);
 xmlhttp.send();
 xmlDoc=xmlhttp.responseXML; 
 
-document.getElementsByClassName("contentarticle").document.write('<div id="inner">');
-var x=xmlDoc.getElementsByTagName("article");
-for (i=0;i<x.length;i++)
-  { 
-  document.getElementsByClassName("contentarticle").document.write("<h2>");
-  document.getElementsByClassName("contentarticle").document.write(x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
-  document.getElementsByClassName("contentarticle").document.write("</h2><p>");
-  document.getElementsByClassName("contentarticle").document.write(x[i].getElementsByTagName("month")[0].childNodes[0].nodeValue);
-  document.getElementsByClassName("contentarticle").document.write("</p>");
-  }
-document.getElementsByClassName("contentarticle").document.write("</div>");
+document.getElementById("title").innerHTML=
+xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+document.getElementById("date").innerHTML=
+xmlDoc.getElementsByTagName("date")[0].childNodes[0].nodeValue;
+document.getElementById("body").innerHTML=
+xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;
+
 </script>
     </head>
     <body>
@@ -43,23 +39,9 @@ document.getElementsByClassName("contentarticle").document.write("</div>");
             <a href="http://blog.paigeknickle.com">
                 <table>
                     <tr><td class="contentarticle">
-                        <script>
-                            if (window.XMLHttpRequest)
-                              {// code for IE7+, Firefox, Chrome, Opera, Safari
-                              xmlhttp=new XMLHttpRequest();
-                              }
-                            else
-                              {// code for IE6, IE5
-                              xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                              }
-                            xmlhttp.open("GET","contentarticle.xml",false);
-                            xmlhttp.send();
-                            xmlDoc=xmlhttp.responseXML;
-                            
-                            var y=xmlDoc.getElementsByTagName("title");
-                            var element=document.getElementById("contentarticle");
-                            element.document.write(y);
-                        </script>
+                        <h2 id="title"></h2>
+                        <h4 id="date"></h4>
+                        <p id="body"></p>
                     </td></tr>
                     <tr><td class="label"><p>Blog</p></td></tr>
                 </table>
