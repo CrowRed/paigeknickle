@@ -17,17 +17,17 @@ xmlhttp.open("GET","contentarticle.xml",false);
 xmlhttp.send();
 xmlDoc=xmlhttp.responseXML; 
 
-document.getElementsByClassName("contentarticle").document.write("<table border='1'>");
+document.getElementsByClassName("contentarticle").document.write('<div id="inner">');
 var x=xmlDoc.getElementsByTagName("article");
 for (i=0;i<x.length;i++)
   { 
-  document.getElementsByClassName("contentarticle")document.write("<tr><td>");
+  document.getElementsByClassName("contentarticle")document.write("<h2>");
   document.getElementsByClassName("contentarticle")document.write(x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
-  document.getElementsByClassName("contentarticle")document.write("</td><td>");
+  document.getElementsByClassName("contentarticle")document.write("</h2><p>");
   document.getElementsByClassName("contentarticle")document.write(x[i].getElementsByTagName("month")[0].childNodes[0].nodeValue);
-  document.getElementsByClassName("contentarticle")document.write("</td></tr>");
+  document.getElementsByClassName("contentarticle")document.write("</p>");
   }
-document.getElementsByClassName("contentarticle")document.write("</table>");
+document.getElementsByClassName("contentarticle")document.write("</div>");
 </script>
     </head>
     <body>
