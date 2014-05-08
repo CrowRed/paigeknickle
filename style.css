@@ -52,7 +52,7 @@ table {
     /* background-color: #abdbe3; */
     background-color: rgba(15, 42, 96, 0.7);
 }
-td.content {
+td.content, .contentarticle {
     margin: 0px;
     height: 300px;
     width: 300px;
