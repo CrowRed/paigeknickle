@@ -4,19 +4,6 @@
         <title>Paige Knickle</title>
         <link rel="icon" href="images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script>
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.open("GET","contentarticle.xml",false);
-xmlhttp.send();
-xmlDoc=xmlhttp.responseXML; 
-</script>
     </head>
     <body>
         <nav>
@@ -31,24 +18,9 @@ xmlDoc=xmlhttp.responseXML;
             <a href="http://blog.paigeknickle.com">
                 <table>
                     <tr><td class="contentarticle">
-<script>
-document.write("<table border='1'>");
-var x=xmlDoc.getElementsByTagName(“article”);
-for (i=0;i<x.length;i++)
-  { 
-  document.write("<tr><td>");
-  document.write(x[i].getElementsByTagName(“title”)[0].childNodes[0].nodeValue);
-  document.write("</td><td>");
-  document.write(x[i].getElementsByTagName(“day”)[0].childNodes[0].nodeValue);
-  document.write("</td></tr>");
-  }
-document.write("</table>");
-
-</script>
-
-                        <h2 id="title"></h2>
-                        <h4 id="date"></h4>
-                        <p id="body"></p>
+                        <h3 id="title">Hello World</h3>
+                        <h4 id="date">May 8, 2014 1:56PM</h4>
+                        <p id="body">This is the first of the blog posts. Welcome to the website. In this section, I'll be describing what I'm working on next and what I'm excited about. Thus, it won't be the same as my tumblr, which is just a place for me to reblog things that I think are interesting, relevant, or hilarious on tumblr. Currently, I'm working on this particular project, but soon I'll be working on the arduino. Thanks for checking the site out!</p>
                     </td></tr>
                     <tr><td class="label"><p>Blog</p></td></tr>
                 </table>
