@@ -24,17 +24,17 @@ nav {
 }
 nav h1 {
     font-family: 'Megrim',cursive;
-	  font-weight: 400;
-	  font-size: 27px;
+    font-weight: 400;
+    font-size: 27px;
     color: rgb(255, 255, 255);
-	  text-transform: uppercase;
+    text-transform: uppercase;
 }
 nav h3 {
     font-family: 'Megrim',cursive;
-	  font-weight: 400;
-	  font-size: 20px;
+    font-weight: 400;
+    font-size: 20px;
     color: rgb(255, 255, 255);
-	  text-transform: uppercase;
+    text-transform: uppercase;
 }
 a:hover {
     cursor: crosshair;
@@ -44,7 +44,7 @@ main {
     float: right;
     width: 74%;
 }
-table {
+#section {
     float: left;
     margin-right: 5%;
     margin-left: 5%;
@@ -52,7 +52,7 @@ table {
     /* background-color: #abdbe3; */
     background-color: rgba(15, 42, 96, 0.7);
 }
-td.content, .contentarticle {
+td.content {
     margin: 0px;
     height: 300px;
     width: 300px;
@@ -62,37 +62,48 @@ td.content p {
     color: white;
     font-size: 15px;
 }
+#article {
+    height: 100%;
+    width: 300px;
+    overflow-y: hidden;
+    display: inline-block;
+    text-overflow: '...[READ MORE]';
+}
 td.label {
     background-color: rgba(195, 75, 75, 0.5);
+    height: 150px;
 }
 td.label p {
-    font-family: 'Megrim',cursive;
-    font-weight: 400;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    text-align: center;
+   font-family: 'Megrim',cursive;
+   font-weight: 400;
+   font-size: 20px;
+   color: rgb(255, 255, 255);
+   text-transform: uppercase;
+   text-align: center;
 }
 td.label p:hover {
-    cursor: crosshair;
-    color: #6a479b;
-    text-decoration: none;
+   cursor: crosshair;
+   color: #6a479b;
+   text-decoration: none;
+}
+#bottom {
+                
 }
 #avatar {
-    margin-top: 30px;
-    border-radius: 50%;
-    background-color: #f6f6f6;
-    border-color: #f6f6f6;
-    background: #666 50% 50% no-repeat;
-    background-size: 106px 106px;
-    display: block;
-    height: 106px;
-    width: 106px;
-    border: 3px solid #f6f6f6;
-    position: relative;
+   margin-top: 30px;
+   border-radius: 50%;
+   background-color: #f6f6f6;
+   border-color: #f6f6f6;
+   background: #666 50% 50% no-repeat;
+   background-size: 106px 106px;
+   display: block;
+   height: 106px;
+   width: 106px;
+   border: 3px solid #f6f6f6;
+   position: relative;
 }
 .avatar {
-    height: 106px;
-    width: 106px;
-    border-radius: 50%;
+   height: 106px;
+   width: 106px;
+   border-radius: 50%;
 }
