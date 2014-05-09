@@ -4,6 +4,26 @@
         <title>Paige Knickle</title>
         <link rel="icon" href="images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            var content = document.getElementById('article');
+            var label = document.getElementById('bottom');
+            content.onmouseover = function() {
+                content.style="height: 300px;";
+                label.style="height: 50px;";
+            };
+            content.onmouseout = function() {
+                content.style="height: 250px";
+                label.style="height: 100px;";
+            };
+            label.onmouseover = function() {
+                content.style="height: 300px;";
+                label.style="height: 50px;";
+            };
+            label.onmouseout = function() {
+                content.style="height: 250px;";
+                label.style="height: 100px;";
+            };
+        </script>
     </head>
     <body>
         <nav>
@@ -16,41 +36,47 @@
         <main>
             <!--BLOG-->
             <a href="http://blog.paigeknickle.com">
-                <table>
-                    <tr><td class="contentarticle">
-                        <h3 id="title">Hello World</h3>
-                        <h4 id="date">May 8, 2014 1:56PM</h4>
-                        <p id="body">This is the first of the blog posts. Welcome to the website. In this section, I'll be describing what I'm working on next and what I'm excited about. Thus, it won't be the same as my tumblr, which is just a place for me to reblog things that I think are interesting, relevant, or hilarious on tumblr. Currently, I'm working on this particular project, but soon I'll be working on the arduino. Thanks for checking the site out!</p>
+                <table id="section">
+                    <tr><td class="content">
+                        <div id="article">
+                        <h1>Title</h1>
+                        <h3>Date</h3>
+                        <p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra massa nec euismod convallis. Maecenas faucibus quam quis convallis mollis. Sed semper semper tortor. Sed nec aliquam ante, at posuere lectus. Maecenas a iaculis arcu. Mauris in orci ut nisi imperdiet accumsan sit amet at purus. Quisque eget ornare justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce risus dolor, semper eu posuere mollis, tincidunt a lectus.
+
+Curabitur id nunc neque. Phasellus pellentesque nulla ac metus iaculis, sit amet molestie massa bibendum. Aliquam ullamcorper, velit interdum placerat hendrerit, nunc magna condimentum risus, sit amet rutrum dui tellus et felis. Ut viverra sapien nibh, vitae consectetur turpis aliquam in. Vivamus pharetra semper nulla nec condimentum. Nunc bibendum justo id sem fermentum egestas. Cras fringilla enim nec pharetra pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur molestie augue, eget ullamcorper purus. Duis ultrices vitae mi non feugiat. Duis rhoncus placerat ligula, ut aliquam est rutrum in. Curabitur eget porttitor nisi. Integer ornare risus sed lectus fringilla interdum. Sed adipiscing tortor purus. Donec pretium justo elit, at semper dui dapibus nec. Morbi sit amet gravida orci, at tincidunt dui. </p>
+                    </div>
                     </td></tr>
-                    <tr><td class="label"><p>Blog</p></td></tr>
+                    <tr><td class="label"><div id="bottom"><p>Blog</p></div></td></tr>
                 </table>
             </a>
             <!--ART-->
             <a href="http://paigeknickle.com/art/">
                 <table>
                     <tr><td class="content"><p>hello</p></td></tr>
-                    <tr><td class="label"><p>Blog</p></td></tr>
+                    <tr><td class="label"><p>Art</p></td></tr>
                 </table>
             </a>
             <!--BIO-->
             <a href="http://paigeknickle.com/about/">
                 <table>
                     <tr><td class="content"><p>hello</p></td></tr>
-                    <tr><td class="label"><p>Blog</p></td></tr>
+                    <tr><td class="label"><p>Bio</p></td></tr>
                 </table>
             </a>
             <!--TUMBLR-->
             <a href="http://paige-on-stage.tumblr.com">
                 <table>
                     <tr><td class="content"><p>hello</p></td></tr>
-                    <tr><td class="label"><p>Blog</p></td></tr>
+                    <tr><td class="label"><p>tumblr</p></td></tr>
                 </table>
             </a>
             <!--MUSIC-->
             <a href="http://paigeknickle.com/music/">
                 <table>
                     <tr><td class="content"><p>hello</p></td></tr>
-                    <tr><td class="label"><p>Blog</p></td></tr>
+                    <tr><td class="label"><p>Music</p></td></tr>
                 </table>
             </a>
         </main>
