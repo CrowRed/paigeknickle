@@ -5,7 +5,7 @@
   src: local("Megrim"), url("http://themes.googleusercontent.com/static/fonts/megrim/v5/DO-J3fN7tP-bKfriFzSkEOvvDin1pK8aKteLpeZ5c0A.woff") format("woff");
 }
 body {
-	background-image: url('images/chihulytree.jpg');
+	background-image: url('images/chihulytree.JPG');
 	background-size: cover;
 	background-color: rgba(15, 42, 96, 0.7);
 }
