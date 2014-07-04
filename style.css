@@ -103,5 +103,6 @@ a:hover {
 	}
 	#background {
 		height: 101%;
+		background-image: none;
 	}
 }
