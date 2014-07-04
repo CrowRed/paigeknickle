@@ -88,3 +88,10 @@ a:hover {
 .ping {
 	display: none;
 }
+@media handheld {
+	#article {
+		width: 98%;
+		height: 98%;
+		position: fixed;
+	}
+}
