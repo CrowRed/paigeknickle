@@ -1,13 +1,46 @@
 @font-face {
-  font-family: "Megrim";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Megrim"), url("http://themes.googleusercontent.com/static/fonts/megrim/v5/DO-J3fN7tP-bKfriFzSkEOvvDin1pK8aKteLpeZ5c0A.woff") format("woff");
+        font-family: "Megrim";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Megrim"), url("http://themes.googleusercontent.com/static/fonts/megrim/v5/DO-J3fN7tP-bKfriFzSkEOvvDin1pK8aKteLpeZ5c0A.woff") format("woff");
+}
+@keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+}
+
+/* Opera */
+@-o-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
 }
 body {
 	background-image: url('images/chihulytree.JPG');
 	background-size: cover;
-	background-color: rgba(15, 42, 96, 0.7);
+	background-color: rgba(15, 42, 96, 0.7);      
+        -webkit-animation: fadein 2s; /* Safari and Chrome */
+           -moz-animation: fadein 2s; /* Firefox */
+            -ms-animation: fadein 2s; /* Internet Explorer */
+             -o-animation: fadein 2s; /* Opera */
+                animation: fadein 2s;
 }
 h1 {
 	font-family: 'Megrim',cursive;
@@ -31,8 +64,8 @@ a {
 	color: rgb(255, 255, 255);
 }
 a:hover {
-    cursor: crosshair;
-    color: #6a479b;
+        cursor: crosshair;
+        color: #6a479b;
 }
 #article {
 	padding: 20px;
