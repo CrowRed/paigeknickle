@@ -94,4 +94,7 @@ a:hover {
 		height: 98%;
 		position: fixed;
 	}
+	#background {
+		display: none;
+	}
 }
