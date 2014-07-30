@@ -95,9 +95,8 @@ a:hover {
 }
 @media screen and (max-width: 790px) {
 	#article {
+		top: 30%;
 		width: 85%;
-		height: 85%;
-		position: fixed;
 		border: 1px solid rgba(154, 138, 171, 0.4);
 		background-color: rgba(195, 75, 75, 0.8);
 	}
@@ -108,9 +107,8 @@ a:hover {
 }
 @media screen and (max-width: 480px) {
 	#article {
+		top: 30%;
 		width: 85%;
-		height: 85%;
-		position: fixed;
 		border: 1px solid rgba(154, 138, 171, 0.4);
 		background-color: rgba(195, 75, 75, 0.8);
 	}
